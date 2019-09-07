@@ -1,18 +1,25 @@
 pipeline {
-    agent any 
-
-    stages {
-        stage('Build Assets') {
-            agent any 
-            steps {
-                echo 'Building Assets'
-            }
-        }
-        stage('Test') {
-            agent any
-            steps {
-                echo 'Testing stuff...'
-            }
-        }
+  agent any
+  stages {
+    stage('Build Assets-br') {
+      steps {
+        echo 'Building Assets'
+      }
     }
+    stage('Test') {
+      steps {
+        echo 'Testing stuff 2...'
+      }
+    }
+    stage('Check stage') {
+      steps {
+        echo 'Check...'
+      }
+    }
+    stage('') {
+      steps {
+        echo 'finish'
+      }
+    }
+  }
 }
