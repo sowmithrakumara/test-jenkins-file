@@ -14,5 +14,11 @@ pipeline {
                 echo 'Testing stuff 2...'
             }
         }
+        stage('Check stage') {
+            //agent any
+            steps {
+                echo 'Check...'
+            }
+        }
     }
 }
